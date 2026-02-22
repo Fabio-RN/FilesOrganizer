@@ -1,0 +1,15 @@
+D:\Programación\C#\Files_Organizer\bin\Release\net10.0\win-x64\Files_Organizer.exe
+D:\Programación\C#\Files_Organizer\bin\Release\net10.0\win-x64\Files_Organizer.deps.json
+D:\Programación\C#\Files_Organizer\bin\Release\net10.0\win-x64\Files_Organizer.runtimeconfig.json
+D:\Programación\C#\Files_Organizer\bin\Release\net10.0\win-x64\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\bin\Release\net10.0\win-x64\Files_Organizer.pdb
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.AssemblyInfoInputs.cache
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.AssemblyInfo.cs
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.csproj.CoreCompileInputs.cache
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.sourcelink.json
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\refint\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.pdb
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\Files_Organizer.genruntimeconfig.cache
+D:\Programación\C#\Files_Organizer\obj\Release\net10.0\win-x64\ref\Files_Organizer.dll
