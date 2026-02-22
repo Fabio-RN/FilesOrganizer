@@ -1,0 +1,14 @@
+D:\Programación\C#\Files_Organizer\bin\Debug\net10.0\Files_Organizer.exe
+D:\Programación\C#\Files_Organizer\bin\Debug\net10.0\Files_Organizer.deps.json
+D:\Programación\C#\Files_Organizer\bin\Debug\net10.0\Files_Organizer.runtimeconfig.json
+D:\Programación\C#\Files_Organizer\bin\Debug\net10.0\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\bin\Debug\net10.0\Files_Organizer.pdb
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.AssemblyInfoInputs.cache
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.AssemblyInfo.cs
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.csproj.CoreCompileInputs.cache
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\refint\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.pdb
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.genruntimeconfig.cache
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\ref\Files_Organizer.dll
