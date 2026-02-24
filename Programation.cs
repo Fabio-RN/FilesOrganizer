@@ -4,112 +4,112 @@ using System;
 
 namespace Files_Organizer;
 
-class ProgramationFiles
+class ProgrammingFiles
 {
-    public void OrganizeProgramation()
+    public void OrganizeProgramming()
     {
-        string carpetaOrigen = @"C:\Users\Fabio\Downloads\";
-        string carpetaCs = @"C:\Users\Fabio\Downloads\Programacion\CSs";
-        string carpetaJson = @"C:\Users\Fabio\Downloads\Programacion\JSONs";
-        string carpetaTxt = @"C:\Users\Fabio\Downloads\Programacion\TXTs";
-        string carpetaJava = @"C:\Users\Fabio\Downloads\Programacion\JARs";
-        string carpetaPython = @"C:\Users\Fabio\Downloads\Programacion\PYs";
-        string carpetaHTML = @"C:\Users\Fabio\Downloads\Programacion\HTMLs";
-        string carpetaJavaScript = @"C:\Users\Fabio\Downloads\Programacion\JSs";
-        string carpetaXml = @"C:\Users\Fabio\Downloads\Programacion\XMLs";
+        string sourcePath = @"C:\Users\Fabio\Downloads\";
+        string csPath = @"C:\Users\Fabio\Downloads\Programming\CSs";
+        string jsonPath = @"C:\Users\Fabio\Downloads\Programming\JSONs";
+        string txtPath = @"C:\Users\Fabio\Downloads\Programming\TXTs";
+        string javaPath = @"C:\Users\Fabio\Downloads\Programming\JARs";
+        string pythonPath = @"C:\Users\Fabio\Downloads\Programming\PYs";
+        string htmlPath = @"C:\Users\Fabio\Downloads\Programming\HTMLs";
+        string javascriptPath = @"C:\Users\Fabio\Downloads\Programming\JSs";
+        string xmlPath = @"C:\Users\Fabio\Downloads\Programming\XMLs";
 
-        // Asegurarse de que las carpetas destino existan
-        if (!Directory.Exists(carpetaCs))
-            Directory.CreateDirectory(carpetaCs);
-        if (!Directory.Exists(carpetaJson))
-            Directory.CreateDirectory(carpetaJson);
-        if (!Directory.Exists(carpetaTxt))
-            Directory.CreateDirectory(carpetaTxt);
-        if (!Directory.Exists(carpetaJava))
-            Directory.CreateDirectory(carpetaJava);
-        if (!Directory.Exists(carpetaPython))
-            Directory.CreateDirectory(carpetaPython);
-        if (!Directory.Exists(carpetaHTML))
-            Directory.CreateDirectory(carpetaHTML);
-        if (!Directory.Exists(carpetaJavaScript))
-            Directory.CreateDirectory(carpetaJavaScript);
-        if (!Directory.Exists(carpetaXml))
-            Directory.CreateDirectory(carpetaXml);
+        // Ensure that the destination folders exist
+        if (!Directory.Exists(csPath))
+            Directory.CreateDirectory(csPath);
+        if (!Directory.Exists(jsonPath))
+            Directory.CreateDirectory(jsonPath);
+        if (!Directory.Exists(txtPath))
+            Directory.CreateDirectory(txtPath);
+        if (!Directory.Exists(javaPath))
+            Directory.CreateDirectory(javaPath);
+        if (!Directory.Exists(pythonPath))
+            Directory.CreateDirectory(pythonPath);
+        if (!Directory.Exists(htmlPath))
+            Directory.CreateDirectory(htmlPath);
+        if (!Directory.Exists(javascriptPath))
+            Directory.CreateDirectory(javascriptPath);
+        if (!Directory.Exists(xmlPath))
+            Directory.CreateDirectory(xmlPath);
 
-        string[] cs = Directory.GetFiles(carpetaOrigen, "*.cs", SearchOption.TopDirectoryOnly);
-        string[] json = Directory.GetFiles(carpetaOrigen, "*.json", SearchOption.TopDirectoryOnly);
-        string[] txt = Directory.GetFiles(carpetaOrigen, "*.txt", SearchOption.TopDirectoryOnly);
-        string[] java = Directory.GetFiles(carpetaOrigen, "*.jar", SearchOption.TopDirectoryOnly);
-        string[] python = Directory.GetFiles(carpetaOrigen, "*.py", SearchOption.TopDirectoryOnly);
-        string[] html = Directory.GetFiles(carpetaOrigen, "*.html", SearchOption.TopDirectoryOnly);
-        string[] javascript = Directory.GetFiles(carpetaOrigen, "*.js", SearchOption.TopDirectoryOnly);
-        string[] xml = Directory.GetFiles(carpetaOrigen, "*.xml", SearchOption.TopDirectoryOnly);
+        string[] cs = Directory.GetFiles(sourcePath, "*.cs", SearchOption.TopDirectoryOnly);
+        string[] json = Directory.GetFiles(sourcePath, "*.json", SearchOption.TopDirectoryOnly);
+        string[] txt = Directory.GetFiles(sourcePath, "*.txt", SearchOption.TopDirectoryOnly);
+        string[] java = Directory.GetFiles(sourcePath, "*.jar", SearchOption.TopDirectoryOnly);
+        string[] python = Directory.GetFiles(sourcePath, "*.py", SearchOption.TopDirectoryOnly);
+        string[] html = Directory.GetFiles(sourcePath, "*.html", SearchOption.TopDirectoryOnly);
+        string[] javascript = Directory.GetFiles(sourcePath, "*.js", SearchOption.TopDirectoryOnly);
+        string[] xml = Directory.GetFiles(sourcePath, "*.xml", SearchOption.TopDirectoryOnly);
 
-        foreach (string archivo in java)
+        foreach (string file in java)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaJava, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(javaPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
 
-        foreach (string archivo in txt)
+        foreach (string file in txt)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaTxt, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(txtPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
 
-        foreach (string archivo in json)
+        foreach (string file in json)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaJson, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(jsonPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
-        foreach(string archivo in cs)
+        foreach(string file in cs)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaCs, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(csPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
-        foreach(string archivo in python)
+        foreach(string file in python)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaPython, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(pythonPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
-        foreach(string archivo in html)
+        foreach(string file in html)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaHTML, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(htmlPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
-        foreach(string archivo in javascript)
+        foreach(string file in javascript)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaJavaScript, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(javascriptPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
-        foreach(string archivo in xml)
+        foreach(string file in xml)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaXml, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(xmlPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
     }
 }

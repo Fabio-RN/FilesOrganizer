@@ -8,55 +8,55 @@ class MiscellaneousFiles
 {
     public void OrganizeMiscellaneous()
     {
-        string carpetaOrigen = @"C:\Users\Fabio\Downloads\";
-        string carpetaMsis = @"C:\Users\Fabio\Downloads\Miscelaneous\MSIs";
-        string carpetaIsos = @"C:\Users\Fabio\Downloads\Miscelaneous\Isos";
-        string carpetaExes = @"C:\Users\Fabio\Downloads\Miscelaneous\EXEs";
-        string carpetaZips = @"C:\Users\Fabio\Downloads\Miscelaneous\Zips";
-        string carpetaRars = @"C:\Users\Fabio\Downloads\Miscelaneous\Rars";
+        string sourcePath = @"C:\Users\Fabio\Downloads\";
+        string msiPath = @"C:\Users\Fabio\Downloads\Miscellaneous\MSIs";
+        string isoPath = @"C:\Users\Fabio\Downloads\Miscellaneous\Isos";
+        string exePath = @"C:\Users\Fabio\Downloads\Miscellaneous\EXEs";
+        string zipPath = @"C:\Users\Fabio\Downloads\Miscellaneous\Zips";
+        string rarPath = @"C:\Users\Fabio\Downloads\Miscellaneous\Rars";
 
-        // Asegurarse de que las carpetas destino existan
-        if (!Directory.Exists(carpetaMsis))
-            Directory.CreateDirectory(carpetaMsis);
-        if (!Directory.Exists(carpetaIsos))
-            Directory.CreateDirectory(carpetaIsos);
-        if (!Directory.Exists(carpetaExes))
-            Directory.CreateDirectory(carpetaExes);
-        if (!Directory.Exists(carpetaZips))
-            Directory.CreateDirectory(carpetaZips);
-        if (!Directory.Exists(carpetaRars))
-            Directory.CreateDirectory(carpetaRars);
+        // Ensure that the destination folders exist
+        if (!Directory.Exists(msiPath))
+            Directory.CreateDirectory(msiPath);
+        if (!Directory.Exists(isoPath))
+            Directory.CreateDirectory(isoPath);
+        if (!Directory.Exists(exePath))
+            Directory.CreateDirectory(exePath);
+        if (!Directory.Exists(zipPath))
+            Directory.CreateDirectory(zipPath);
+        if (!Directory.Exists(rarPath))
+            Directory.CreateDirectory(rarPath);
 
-        string[] executables = Directory.GetFiles(carpetaOrigen, "*.exe", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.msi", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.iso", SearchOption.TopDirectoryOnly))
+        string[] executables = Directory.GetFiles(sourcePath, "*.exe", SearchOption.TopDirectoryOnly)
+            .Concat(Directory.GetFiles(sourcePath, "*.msi", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.iso", SearchOption.TopDirectoryOnly))
             .ToArray();
-        string[] Comprimidos = Directory.GetFiles(carpetaOrigen, "*.zip", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.rar", SearchOption.TopDirectoryOnly))
+        string[] compressedFiles = Directory.GetFiles(sourcePath, "*.zip", SearchOption.TopDirectoryOnly)
+            .Concat(Directory.GetFiles(sourcePath, "*.rar", SearchOption.TopDirectoryOnly))
             .ToArray();
 
-        foreach (string archivo in executables)
+        foreach (string file in executables)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestinoExes = Path.Combine(carpetaExes, nombreArchivo);
-            string rutaDestinoMsi = Path.Combine(carpetaMsis, nombreArchivo);
-            string rutaDestinoIso = Path.Combine(carpetaIsos, nombreArchivo);
-            if (archivo.EndsWith(".exe"))
-                File.Move(archivo, rutaDestinoExes);
-            else if (archivo.EndsWith(".msi"))
-                File.Move(archivo, rutaDestinoMsi);
-            else if (archivo.EndsWith(".iso"))
-                File.Move(archivo, rutaDestinoIso);
+            string fileName = Path.GetFileName(file);
+            string exeDestinationPath = Path.Combine(exePath, fileName);
+            string msiDestinationPath = Path.Combine(msiPath, fileName);
+            string isoDestinationPath = Path.Combine(isoPath, fileName);
+            if (file.EndsWith(".exe"))
+                File.Move(file, exeDestinationPath);
+            else if (file.EndsWith(".msi"))
+                File.Move(file, msiDestinationPath);
+            else if (file.EndsWith(".iso"))
+                File.Move(file, isoDestinationPath);
         }
-        foreach (string archivo in Comprimidos)
+        foreach (string file in compressedFiles)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaZips, nombreArchivo);
-            string rutaDestinoRar = Path.Combine(carpetaRars, nombreArchivo);
-            if(archivo.EndsWith(".zip"))
-                File.Move(archivo, rutaDestino);
-            else if (archivo.EndsWith(".rar"))
-                File.Move(archivo, rutaDestinoRar);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(zipPath, fileName);
+            string rarDestinationPath = Path.Combine(rarPath, fileName);
+            if(file.EndsWith(".zip"))
+                File.Move(file, destinationPath);
+            else if (file.EndsWith(".rar"))
+                File.Move(file, rarDestinationPath);
         }
     }
 }

@@ -1,15 +1,15 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using System;
 using System.Reflection.Metadata;
 using Documents = Files_Organizer.DocumentFiles;
-using Multimedia = Files_Organizer.MediaFiles;
-using Programacion = Files_Organizer.ProgramationFiles;
-using Miscelaneos = Files_Organizer.MiscellaneousFiles;
+using Media = Files_Organizer.MediaFiles;
+using Programming = Files_Organizer.ProgrammingFiles;
+using Miscellaneous = Files_Organizer.MiscellaneousFiles;
 
 
-//TODO: Hacer que se ejecute el programa cada cierto tiempo, para que se mantenga organizado sin necesidad de abrirlo cada vez. (Posiblemente con un timer o algo asi)
-//TODO: Traducir el programa al ingles, para que sea mas accesible a mas personas.
+//TODO: Make the program run every certain time, so it stays organized without needing to open it every time. (Possibly with a timer or something like that)
+//TODO: Translate the program to English, so it's more accessible to more people.
 
 namespace Files_Organizer;
 
@@ -17,13 +17,13 @@ class Manager
 {
     static void Main(string[] args)
     {
-        Documents documents= new Documents();
+        Documents documents = new Documents();
         documents.OrganizeDocuments();
-        Multimedia multimedia = new Multimedia();
-        multimedia.OrganizeMedia();
-        Programacion programacion = new Programacion();
-        programacion.OrganizeProgramation();
-        Miscelaneos miscelaneous = new Miscelaneos();
-        miscelaneous.OrganizeMiscellaneous();
+        Media media = new Media();
+        media.OrganizeMedia();
+        Programming programming = new Programming();
+        programming.OrganizeProgramming();
+        Miscellaneous miscellaneous = new Miscellaneous();
+        miscellaneous.OrganizeMiscellaneous();
     }
 }

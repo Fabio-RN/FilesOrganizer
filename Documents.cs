@@ -8,46 +8,46 @@ class DocumentFiles
 {
     public void OrganizeDocuments()
     {
-        string carpetaOrigen = @"C:\Users\Fabio\Downloads\";
-        string carpetaDocumentos = @"C:\Users\Fabio\Downloads\Documentos\PDFs";
-        string carpetaTxt = @"C:\Users\Fabio\Downloads\Documentos\TXTs";
-        string carpetaDocx = @"C:\Users\Fabio\Downloads\Documentos\DOCXs";
+        string sourcePath = @"C:\Users\Fabio\Downloads\";
+        string documentsPath = @"C:\Users\Fabio\Downloads\Documents\PDFs";
+        string txtPath = @"C:\Users\Fabio\Downloads\Documents\TXTs";
+        string docxPath = @"C:\Users\Fabio\Downloads\Documents\DOCXs";
 
-        // Asegurarse de que las carpetas destino existan
-        if (!Directory.Exists(carpetaDocumentos))
-            Directory.CreateDirectory(carpetaDocumentos);
-        if (!Directory.Exists(carpetaTxt))
-            Directory.CreateDirectory(carpetaTxt);
-        if (!Directory.Exists(carpetaDocx))
-            Directory.CreateDirectory(carpetaDocx);    
+        // Ensure that the destination folders exist
+        if (!Directory.Exists(documentsPath))
+            Directory.CreateDirectory(documentsPath);
+        if (!Directory.Exists(txtPath))
+            Directory.CreateDirectory(txtPath);
+        if (!Directory.Exists(docxPath))
+            Directory.CreateDirectory(docxPath);    
 
-        string[] pdfs = Directory.GetFiles(carpetaOrigen, "*.pdf", SearchOption.TopDirectoryOnly);
-        string[] txt = Directory.GetFiles(carpetaOrigen, "*.txt", SearchOption.TopDirectoryOnly);
-        string[] docx = Directory.GetFiles(carpetaOrigen, "*.docx", SearchOption.TopDirectoryOnly);
+        string[] pdfs = Directory.GetFiles(sourcePath, "*.pdf", SearchOption.TopDirectoryOnly);
+        string[] txt = Directory.GetFiles(sourcePath, "*.txt", SearchOption.TopDirectoryOnly);
+        string[] docx = Directory.GetFiles(sourcePath, "*.docx", SearchOption.TopDirectoryOnly);
 
-        foreach (string archivo in pdfs)
+        foreach (string file in pdfs)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaDocumentos, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(documentsPath, fileName);
 
-            File.Move(archivo, rutaDestino);
+            File.Move(file, destinationPath);
         }
 
-        foreach (string archivo in txt)
+        foreach (string file in txt)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaTxt, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(txtPath, fileName);
 
-            File.Move(archivo, rutaDestino);
+            File.Move(file, destinationPath);
         }
 
-        foreach (string archivo in docx)
+        foreach (string file in docx)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string rutaDestino = Path.Combine(carpetaDocx, nombreArchivo);
+            string fileName = Path.GetFileName(file);
+            string destinationPath = Path.Combine(docxPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
     }
 }

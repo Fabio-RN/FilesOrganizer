@@ -8,170 +8,170 @@ class MediaFiles
 {
     public void OrganizeMedia()
     {
-        string carpetaOrigen = @"C:\Users\Fabio\Downloads\";
+        string sourcePath = @"C:\Users\Fabio\Downloads\";
 
-        //! CARPETAS DE VIDEOS PARA ORDENARLAS POR FORMATO
-        string carpetaMp4 = @"C:\Users\Fabio\Downloads\Medios\Videos\MP4s";
-        string carpetaAvi = @"C:\Users\Fabio\Downloads\Medios\Videos\AVIs";
-        string carpetaMkv = @"C:\Users\Fabio\Downloads\Medios\Videos\MKVs";
-        string carpetaMov = @"C:\Users\Fabio\Downloads\Medios\Videos\MOVs";
-        string carpetaFlv = @"C:\Users\Fabio\Downloads\Medios\Videos\FLVs";
-        string carpetaWmv = @"C:\Users\Fabio\Downloads\Medios\Videos\WMVs";
+        //! VIDEO FOLDERS TO ORGANIZE THEM BY FORMAT
+        string mp4Path = @"C:\Users\Fabio\Downloads\Media\Videos\MP4s";
+        string aviPath = @"C:\Users\Fabio\Downloads\Media\Videos\AVIs";
+        string mkvPath = @"C:\Users\Fabio\Downloads\Media\Videos\MKVs";
+        string movPath = @"C:\Users\Fabio\Downloads\Media\Videos\MOVs";
+        string flvPath = @"C:\Users\Fabio\Downloads\Media\Videos\FLVs";
+        string wmvPath = @"C:\Users\Fabio\Downloads\Media\Videos\WMVs";
 
-        //! CARPETAS DE IMAGENES PARA ORDENARLAS POR FORMATO
-        string carpetaJpgs = @"C:\Users\Fabio\Downloads\Medios\Imagenes\JPGs";
-        string carpetaPngs = @"C:\Users\Fabio\Downloads\Medios\Imagenes\PNGs";
-        string carpetaGifs = @"C:\Users\Fabio\Downloads\Medios\Imagenes\GIFs";
-        string carpetaIcos = @"C:\Users\Fabio\Downloads\Medios\Imagenes\ICOs";
-        string carpetaWebp = @"C:\Users\Fabio\Downloads\Medios\Imagenes\WEBPs";
-        string carpetaSvg = @"C:\Users\Fabio\Downloads\Medios\Imagenes\SVGs";
-        string carpetaBmp = @"C:\Users\Fabio\Downloads\Medios\Imagenes\BMPs";
+        //! IMAGE FOLDERS TO ORGANIZE THEM BY FORMAT
+        string jpgPath = @"C:\Users\Fabio\Downloads\Media\Images\JPGs";
+        string pngPath = @"C:\Users\Fabio\Downloads\Media\Images\PNGs";
+        string gifPath = @"C:\Users\Fabio\Downloads\Media\Images\GIFs";
+        string icoPath = @"C:\Users\Fabio\Downloads\Media\Images\ICOs";
+        string webpPath = @"C:\Users\Fabio\Downloads\Media\Images\WEBPs";
+        string svgPath = @"C:\Users\Fabio\Downloads\Media\Images\SVGs";
+        string bmpPath = @"C:\Users\Fabio\Downloads\Media\Images\BMPs";
                 
-        //! CARPETAS DE AUDIO PARA ORDENARLAS POR FORMATO        
-        string carpetaMp3 = @"C:\Users\Fabio\Downloads\Medios\Audios\MP3s";
-        string carpetaWav = @"C:\Users\Fabio\Downloads\Medios\Audios\WAVs";
-        string carpetaFlac = @"C:\Users\Fabio\Downloads\Medios\Audios\FLACs";
-        string carpetaAac = @"C:\Users\Fabio\Downloads\Medios\Audios\AACs";
-        string carpetaOgg = @"C:\Users\Fabio\Downloads\Medios\Audios\OGGs";
-        string carpetaWma = @"C:\Users\Fabio\Downloads\Medios\Audios\WMAs";
+        //! AUDIO FOLDERS TO ORGANIZE THEM BY FORMAT        
+        string mp3Path = @"C:\Users\Fabio\Downloads\Media\Audio\MP3s";
+        string wavPath = @"C:\Users\Fabio\Downloads\Media\Audio\WAVs";
+        string flacPath = @"C:\Users\Fabio\Downloads\Media\Audio\FLACs";
+        string aacPath = @"C:\Users\Fabio\Downloads\Media\Audio\AACs";
+        string oggPath = @"C:\Users\Fabio\Downloads\Media\Audio\OGGs";
+        string wmaPath = @"C:\Users\Fabio\Downloads\Media\Audio\WMAs";
 
-        //! Revision de que las carpetas destino existan, si no, se crean
-        if (!Directory.Exists(carpetaMp4))
-            Directory.CreateDirectory(carpetaMp4);
-        if (!Directory.Exists(carpetaAvi))
-            Directory.CreateDirectory(carpetaAvi);
-        if (!Directory.Exists(carpetaMkv))
-            Directory.CreateDirectory(carpetaMkv);
-        if (!Directory.Exists(carpetaMov))
-            Directory.CreateDirectory(carpetaMov);
-        if (!Directory.Exists(carpetaFlv))
-            Directory.CreateDirectory(carpetaFlv);
-        if (!Directory.Exists(carpetaWmv))
-            Directory.CreateDirectory(carpetaWmv);
+        //! Check if the destination folders exist, if not, create them
+        if (!Directory.Exists(mp4Path))
+            Directory.CreateDirectory(mp4Path);
+        if (!Directory.Exists(aviPath))
+            Directory.CreateDirectory(aviPath);
+        if (!Directory.Exists(mkvPath))
+            Directory.CreateDirectory(mkvPath);
+        if (!Directory.Exists(movPath))
+            Directory.CreateDirectory(movPath);
+        if (!Directory.Exists(flvPath))
+            Directory.CreateDirectory(flvPath);
+        if (!Directory.Exists(wmvPath))
+            Directory.CreateDirectory(wmvPath);
         
-        if (!Directory.Exists(carpetaJpgs))
-            Directory.CreateDirectory(carpetaJpgs);
-        if (!Directory.Exists(carpetaPngs))
-            Directory.CreateDirectory(carpetaPngs);
-        if (!Directory.Exists(carpetaGifs))
-            Directory.CreateDirectory(carpetaGifs);
-        if (!Directory.Exists(carpetaIcos))
-            Directory.CreateDirectory(carpetaIcos);
-        if (!Directory.Exists(carpetaWebp))
-            Directory.CreateDirectory(carpetaWebp);
-        if (!Directory.Exists(carpetaSvg))
-            Directory.CreateDirectory(carpetaSvg);
-        if (!Directory.Exists(carpetaBmp))
-            Directory.CreateDirectory(carpetaBmp);
+        if (!Directory.Exists(jpgPath))
+            Directory.CreateDirectory(jpgPath);
+        if (!Directory.Exists(pngPath))
+            Directory.CreateDirectory(pngPath);
+        if (!Directory.Exists(gifPath))
+            Directory.CreateDirectory(gifPath);
+        if (!Directory.Exists(icoPath))
+            Directory.CreateDirectory(icoPath);
+        if (!Directory.Exists(webpPath))
+            Directory.CreateDirectory(webpPath);
+        if (!Directory.Exists(svgPath))
+            Directory.CreateDirectory(svgPath);
+        if (!Directory.Exists(bmpPath))
+            Directory.CreateDirectory(bmpPath);
 
-        if (!Directory.Exists(carpetaMp3))
-            Directory.CreateDirectory(carpetaMp3);
-        if (!Directory.Exists(carpetaWav))
-            Directory.CreateDirectory(carpetaWav);
-        if (!Directory.Exists(carpetaFlac))
-            Directory.CreateDirectory(carpetaFlac);
-        if (!Directory.Exists(carpetaAac))
-            Directory.CreateDirectory(carpetaAac);
-        if (!Directory.Exists(carpetaOgg))
-            Directory.CreateDirectory(carpetaOgg);
-        if (!Directory.Exists(carpetaWma))
-            Directory.CreateDirectory(carpetaWma);
+        if (!Directory.Exists(mp3Path))
+            Directory.CreateDirectory(mp3Path);
+        if (!Directory.Exists(wavPath))
+            Directory.CreateDirectory(wavPath);
+        if (!Directory.Exists(flacPath))
+            Directory.CreateDirectory(flacPath);
+        if (!Directory.Exists(aacPath))
+            Directory.CreateDirectory(aacPath);
+        if (!Directory.Exists(oggPath))
+            Directory.CreateDirectory(oggPath);
+        if (!Directory.Exists(wmaPath))
+            Directory.CreateDirectory(wmaPath);
 
-        //! FORMATOS DE VIDEOS
-        string[] videos = Directory.GetFiles(carpetaOrigen, "*.mp4", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.avi", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.mkv", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.mov", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.flv", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.wmv", SearchOption.TopDirectoryOnly))
+        //! VIDEO FORMATS
+        string[] videoFiles = Directory.GetFiles(sourcePath, "*.mp4", SearchOption.TopDirectoryOnly)
+            .Concat(Directory.GetFiles(sourcePath, "*.avi", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.mkv", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.mov", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.flv", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.wmv", SearchOption.TopDirectoryOnly))
             .ToArray();
         
-        //! FORMATOS DE IMAGENES
-        string[] imagenes = Directory.GetFiles(carpetaOrigen, "*.jpg", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.jpeg", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.png", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.gif", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.ico", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.webp", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.svg", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.bmp", SearchOption.TopDirectoryOnly))
+        //! IMAGE FORMATS
+        string[] imageFiles = Directory.GetFiles(sourcePath, "*.jpg", SearchOption.TopDirectoryOnly)
+            .Concat(Directory.GetFiles(sourcePath, "*.jpeg", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.png", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.gif", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.ico", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.webp", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.svg", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.bmp", SearchOption.TopDirectoryOnly))
             .ToArray();
         
-        //! FORMATOS DE AUDIO
-        string[] audios = Directory.GetFiles(carpetaOrigen, "*.mp3", SearchOption.TopDirectoryOnly)
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.wav", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.flac", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.aac", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.ogg", SearchOption.TopDirectoryOnly))
-            .Concat(Directory.GetFiles(carpetaOrigen, "*.wma", SearchOption.TopDirectoryOnly))
+        //! AUDIO FORMATS
+        string[] audioFiles = Directory.GetFiles(sourcePath, "*.mp3", SearchOption.TopDirectoryOnly)
+            .Concat(Directory.GetFiles(sourcePath, "*.wav", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.flac", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.aac", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.ogg", SearchOption.TopDirectoryOnly))
+            .Concat(Directory.GetFiles(sourcePath, "*.wma", SearchOption.TopDirectoryOnly))
             .ToArray();
         
-        foreach (string archivo in videos)
+        foreach (string file in videoFiles)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string extension = Path.GetExtension(archivo).ToLower();
-            string rutaDestino = "";
+            string fileName = Path.GetFileName(file);
+            string extension = Path.GetExtension(file).ToLower();
+            string destinationPath = "";
             if (extension == ".mp4")
-                rutaDestino = Path.Combine(carpetaMp4, nombreArchivo);
+                destinationPath = Path.Combine(mp4Path, fileName);
             else if (extension == ".avi")
-                rutaDestino = Path.Combine(carpetaAvi, nombreArchivo);
+                destinationPath = Path.Combine(aviPath, fileName);
             else if (extension == ".mkv")
-                rutaDestino = Path.Combine(carpetaMkv, nombreArchivo);
+                destinationPath = Path.Combine(mkvPath, fileName);
             else if (extension == ".mov")
-                rutaDestino = Path.Combine(carpetaMov, nombreArchivo);
+                destinationPath = Path.Combine(movPath, fileName);
             else if (extension == ".flv")
-                rutaDestino = Path.Combine(carpetaFlv, nombreArchivo);
+                destinationPath = Path.Combine(flvPath, fileName);
             else if (extension == ".wmv")
-                rutaDestino = Path.Combine(carpetaWmv, nombreArchivo);
+                destinationPath = Path.Combine(wmvPath, fileName);
 
-            File.Move(archivo, rutaDestino);
+            File.Move(file, destinationPath);
         }        
 
-        foreach (string archivo in imagenes)
+        foreach (string file in imageFiles)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string extension = Path.GetExtension(archivo).ToLower();
-            string rutaDestino = "";
+            string fileName = Path.GetFileName(file);
+            string extension = Path.GetExtension(file).ToLower();
+            string destinationPath = "";
 
             if (extension == ".jpg" || extension == ".jpeg")
-                rutaDestino = Path.Combine(carpetaJpgs, nombreArchivo);
+                destinationPath = Path.Combine(jpgPath, fileName);
             else if (extension == ".png")
-                rutaDestino = Path.Combine(carpetaPngs, nombreArchivo);
+                destinationPath = Path.Combine(pngPath, fileName);
             else if (extension == ".gif")
-                rutaDestino = Path.Combine(carpetaGifs, nombreArchivo);
+                destinationPath = Path.Combine(gifPath, fileName);
             else if (extension == ".ico")
-                rutaDestino = Path.Combine(carpetaIcos, nombreArchivo);
+                destinationPath = Path.Combine(icoPath, fileName);
             else if (extension == ".webp")
-                rutaDestino = Path.Combine(carpetaWebp, nombreArchivo);
+                destinationPath = Path.Combine(webpPath, fileName);
             else if (extension == ".svg")
-                rutaDestino = Path.Combine(carpetaSvg, nombreArchivo);
+                destinationPath = Path.Combine(svgPath, fileName);
             else if (extension == ".bmp")
-                rutaDestino = Path.Combine(carpetaBmp, nombreArchivo);
+                destinationPath = Path.Combine(bmpPath, fileName);
 
-            File.Move(archivo, rutaDestino);
-            Console.WriteLine($"Movido: {nombreArchivo}");
+            File.Move(file, destinationPath);
+            Console.WriteLine($"Moved: {fileName}");
         }
 
-        foreach (string archivo in audios)
+        foreach (string file in audioFiles)
         {
-            string nombreArchivo = Path.GetFileName(archivo);
-            string extension = Path.GetExtension(archivo).ToLower();
-            string rutaDestino = "";
+            string fileName = Path.GetFileName(file);
+            string extension = Path.GetExtension(file).ToLower();
+            string destinationPath = "";
 
             if (extension == ".mp3")
-                rutaDestino = Path.Combine(carpetaMp3, nombreArchivo);
+                destinationPath = Path.Combine(mp3Path, fileName);
             else if (extension == ".wav")
-                rutaDestino = Path.Combine(carpetaWav, nombreArchivo);
+                destinationPath = Path.Combine(wavPath, fileName);
             else if (extension == ".flac")
-                rutaDestino = Path.Combine(carpetaFlac, nombreArchivo);
+                destinationPath = Path.Combine(flacPath, fileName);
             else if (extension == ".aac")
-                rutaDestino = Path.Combine(carpetaAac, nombreArchivo);
+                destinationPath = Path.Combine(aacPath, fileName);
             else if (extension == ".ogg")
-                rutaDestino = Path.Combine(carpetaOgg, nombreArchivo);
+                destinationPath = Path.Combine(oggPath, fileName);
             else if (extension == ".wma")
-                rutaDestino = Path.Combine(carpetaWma, nombreArchivo);
+                destinationPath = Path.Combine(wmaPath, fileName);
 
-            File.Move(archivo, rutaDestino);
+            File.Move(file, destinationPath);
         }
     }
 }

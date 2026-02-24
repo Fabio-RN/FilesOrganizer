@@ -12,3 +12,4 @@ D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\refint\Files_Organizer.dll
 D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.pdb
 D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.genruntimeconfig.cache
 D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\ref\Files_Organizer.dll
+D:\Programación\C#\Files_Organizer\obj\Debug\net10.0\Files_Organizer.sourcelink.json
