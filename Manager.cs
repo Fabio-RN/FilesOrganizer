@@ -1,4 +1,4 @@
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System;
 using System.Reflection.Metadata;
@@ -9,7 +9,6 @@ using Miscellaneous = Files_Organizer.MiscellaneousFiles;
 
 
 //TODO: Make the program run every certain time, so it stays organized without needing to open it every time. (Possibly with a timer or something like that)
-//TODO: Translate the program to English, so it's more accessible to more people.
 
 namespace Files_Organizer;
 
